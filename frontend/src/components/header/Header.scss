@@ -1,85 +1,199 @@
-header{
-    max-width: 1374px;
-    margin: 0px auto;
-    width: 100%;
-    padding: 30px 10px;
-    display: flex;
-    justify-content: space-between;
+header, .choose-car-and-travel {
+  max-width: 1374px;
+  margin: 0px auto;
+  width: 100%;
+  padding: 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
 }
 
-.header-actions{
-    display: flex;
-    gap: 30px;
-    h3{
-        margin: 0;
-        align-self: center;
-        padding: 10px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: 0.3s ease-out;
-        border-radius: 12px;
-        &:hover:first-child{
-            background: orange;
-            box-shadow: 2px 2px 5px orange;
-            color: white;
-        }
-        &:hover:nth-child(2){
-            background: green;
-            box-shadow: 2px 2px 5px green;
-            color: white;
-        }
-        svg{
-            margin-right: 10px;
-        }
+
+.yellow-circle{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-70%);
+  transition: 0.2s ease-in;
+  &.active{
+      transform: translate(-30%,-70%);
     }
+  }
+
+
+.header{
+  position: relative;
+}
+
+.header-actions {
+  display: flex;
+  gap: 30px;
+
+  h3 {
+    margin: 0;
+    align-self: center;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    border-radius: 12px;
+
+    &:hover:first-child {
+      background: #F9C300;
+      box-shadow: 0px 0px 20px #F2BA154D;
+      color: white;
+    }
+
+    &:hover:nth-child(2) {
+      background: #5FD36C;
+      box-shadow: 0px 0px 20px #5FD36C4D;
+      color: white;
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+  }
 }
 
 .dropbtn {
-    padding: 10px 10px 5px 10px;
-    font-size: 16px;
-    border: none;
-    color: black;
-    cursor: pointer;
-    border-radius: 12px 12px 0px 0px;
-    
+  padding: 10px 10px 5px 10px;
+  font-size: 16px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  border-radius: 12px 12px 0px 0px;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  align-self: center;
+
+  &:hover {
+    .dropbtn {
+      color: white;
+    }
   }
-  
-  .dropdown {
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  border-radius: 0px 0px 12px 12px;
+  background: #5FD36C;
+  box-shadow: 0px 0px 20px #5FD36C4D;
+  z-index: 1;
+  transition: 0.3s ease-out;
+}
+
+.dropdown-content a {
+  text-align: center;
+  color: black;
+  padding: 5px 10px 10px 10px;
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background: #5FD36C;
+  box-shadow: 0px 0px 20px #5FD36C4D;
+}
+
+.choose-car-and-travel{
+  padding: 0px;
+  &--title{
+    height: 100%;
+    font-size: 24px;
+    color: #283D52;
+    text-align: left;
+    padding: 30px 0 30px 30px;
+    max-width: 354px;
+    line-height: 29px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    z-index: 2;
+    justify-content: center;
+  }
+  height: 350px;
+  &--car{
+    flex: 1;
+    height: 100%;
     position: relative;
-    display: inline-block;
-    align-self: center;
+    img{
+      transition: 0.3s ease-in;
+    }
     &:hover{
-        .dropbtn{
-        color: white;
-        }
+      .first-car-circle{
+        transform: translateX(-90px);
+    }
+    .car-green-background{
+      transform: translateX(-50px);
+  }
+  .car{
+    transform: translateX(30px);
+
+  }
+  .road{
+    transform: translateX(50px);
+
+  }
+    }
+    .first-car-circle{
+      position: absolute;
+      top: -50px;
+      left: 100px;
+      z-index:3;
+      
+    }
+    .car-green-background{
+      position: absolute;
+      top: -10px;
+      left: 100px;
+      z-index:1;
+    }
+    .car{
+      position: absolute;
+      height: 318px;
+      z-index: 3;
+      left: 200px;
+    }
+    .road{
+      position: absolute;
+      height: 318px;
+      z-index: 3;
+      left: 360px;
+      z-index: 2;
+      width: 437px;
+      height: 228px;
+      bottom: 60px;
+    }
+    @media (max-width:1141px) {
+      .road{
+        left: 240px
+      }
+      .car{
+        left: 80px;
+      }
+      .car-green-background{
+        left: -20px;
+        
+      }
+      .first-car-circle{
+        left: -20px;
+        
+      }
     }
   }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    width: 100%;
-    border-radius: 0px 0px 12px 12px;
-    background-color: #3e8e41;
-    z-index: 1;
-    transition: 0.3s ease-out;
-  }
-  
-  .dropdown-content a {
-    text-align: center;
-    color: black;
-    padding: 5px 10px 10px 10px;
-    text-decoration: none;
-    display: block;
-    &:hover{
-        color: white;
-    }
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  }
+}
