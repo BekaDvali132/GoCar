@@ -1,0 +1,18 @@
+.select,.ant-select-selector,.ant-select-selection-search,.ant-select-selection-search-input,.ant-select-selection-item{
+    border: none !important;
+    border-radius: 10px !important;
+    height: 50px !important;
+}
+.ant-select-selection-item{
+    text-align: left;
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    color: #283D52;
+    line-height: 18px;
+}
+.ant-select-dropdown{
+    border-radius: 10px !important;
+    border: 1px solid #5FD36C;
+    top: 15px
+}

@@ -1,5 +1,5 @@
 header, .choose-car-and-travel {
-  max-width: 1374px;
+  max-width: 1424px;
   margin: 0px auto;
   width: 100%;
   padding: 30px 30px;
@@ -131,6 +131,7 @@ header, .choose-car-and-travel {
     flex: 1;
     height: 100%;
     position: relative;
+    overflow: visible;
     img{
       transition: 0.3s ease-in;
     }
@@ -192,6 +193,22 @@ header, .choose-car-and-travel {
       }
       .first-car-circle{
         left: -20px;
+        
+      }
+    }
+    @media (max-width:1041px) {
+      .road{
+        left: 200px
+      }
+      .car{
+        left: 40px;
+      }
+      .car-green-background{
+        left: -60px;
+        
+      }
+      .first-car-circle{
+        left: -60px;
         
       }
     }

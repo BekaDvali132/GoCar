@@ -27,9 +27,9 @@ function Header({ car }) {
             <FontAwesomeIcon icon={faUser} />
             ავტორიზაცია
           </h3>
-          <div class="dropdown">
-            <button class="dropbtn">GE</button>
-            <div class="dropdown-content">
+          <div className="dropdown">
+            <button className="dropbtn">GE</button>
+            <div className="dropdown-content">
               <a href="/">EN</a>
             </div>
           </div>
