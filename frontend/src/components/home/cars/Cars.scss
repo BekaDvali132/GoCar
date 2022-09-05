@@ -43,7 +43,8 @@
         max-height: 370px;
         gap: 6px;
         overflow-x: auto;
-        width: 1374px;
+        max-width: calc(100% + 30px);
+        width: calc(100% + 30px);
         &::-webkit-scrollbar{
             display: none;
         }
@@ -186,6 +187,33 @@
             font-size: 12px;
         }
     }
+
+    .car-categories{
+        display: flex;
+        gap: 6px;
+        width: 100%;
+        max-width: 1374px;
+    }
+
+    .car-category{
+        position: relative;
+        flex: 1;
+        max-width: 100%;
+
+        .car-category-title{
+            font-size: 18px;
+            text-align: center;
+            line-height: 23px;
+            color: #fff;
+            position: absolute;
+            top:17px;
+            font-weight: bold;
+            width: 100%;
+        }
+        img{
+            max-width: 100%;
+        }
+    } 
 
 }
 

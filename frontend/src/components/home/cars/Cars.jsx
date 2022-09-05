@@ -5,6 +5,9 @@ import { useRef } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import {ReactComponent as YellowStar} from '../../resources/YellowStar.svg'
+import SportsCar from '../../resources/SportsCar.png'
+import ClassicCar from '../../resources/ClassicCar.png'
+import TripCar from '../../resources/TripCar.png'
 
 function Cars() {
   const carRowOne = useRef(null)
@@ -84,6 +87,20 @@ function Cars() {
         <CarCard/>
         <CarCard/>
         <CarCard/>
+      </div>
+      <div className="car-categories">
+        <div className="car-category">
+          <div className="car-category-title">სპორტული ავტომობილები</div>
+          <img src={SportsCar} alt="Sports Car" />
+          </div>
+        <div className="car-category">
+          <div className="car-category-title">კლასიკური ავტომობილები</div>
+          <img src={ClassicCar} alt="Classic Car" />
+          </div>
+        <div className="car-category">
+          <div className="car-category-title">საექსკურსიო ავტომობილები</div>
+          <img src={TripCar} alt="Trip Car" />
+          </div>
       </div>
     </div>
   );
