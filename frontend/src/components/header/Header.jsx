@@ -10,11 +10,16 @@ import CarGreenBackground from '../resources/Car/CarGreenBackground.png'
 import Car from '../resources/Car/Car.png'
 import Road from '../resources/Car/Road.svg'
 import { useState } from "react";
-
+import GreenBackGroundImage from '../resources/GreenBackGroundImage.png'
+import TransparentBackgroundImage from '../resources/TransparentBackgroundImage.svg'
 function Header({ car }) {
   const [active,setActive] = useState(false)
   return (
+    <>
+    
     <div className="header">
+    <img className="green-background-image" src={GreenBackGroundImage} alt={'Green BackGround Image'} width={726} height={401}/>
+    <img className="transparent-background-image" src={TransparentBackgroundImage} alt="Transparent Background Image" />
       <img src={CarYellowCircle} alt="Yellow Circle" className={`yellow-circle ${active && 'active'}`}/>
       <header>
         <img src={GoCarLogo} alt="GoCar Logo" />
@@ -54,6 +59,8 @@ function Header({ car }) {
         </div>
       </div>}
     </div>
+    </>
+
   );
 }
 
