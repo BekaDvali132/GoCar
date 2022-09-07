@@ -63,6 +63,7 @@ header, .choose-car-and-travel {
   border: none;
   color: black;
   cursor: pointer;
+  background: transparent;
   border-radius: 12px 12px 0px 0px;
 
 }
@@ -228,5 +229,5 @@ header, .choose-car-and-travel {
   transform: matrix(0.92, 0.39, -0.39, 0.92, 0, 0);
   top: -140px;
   right: -10%;
-  z-index: 2;
+  z-index: 1;
 }

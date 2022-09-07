@@ -12,7 +12,7 @@ function Home() {
   const [form] = Form.useForm();
   const [price, setPrice] = useState([20, 50]);
   const [currency, setCurrency] = useState("$");
-  console.log(currency);
+
 
   return (
     <section>

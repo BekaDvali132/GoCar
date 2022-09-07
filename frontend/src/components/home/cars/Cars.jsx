@@ -35,10 +35,6 @@ function Cars() {
     ref.current.scrollLeft += pixels;
     
   };
-
-  
-
-  useEffect(()=>console.log('hello'),[carRowOne?.current?.scrollLeft])
   
   return (
     <div className="cars">

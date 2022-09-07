@@ -9,9 +9,10 @@ import {ReactComponent as Steer} from '../../resources/Steer.svg'
 import {ReactComponent as Clock} from '../../resources/Clock.svg'
 import {ReactComponent as Lock} from '../../resources/Lock.svg'
 import './Cars.scss'
-
+import {Link} from 'react-router-dom'
 function CarCard() {
   return (
+    <Link to={'/cars/1'}>
     <div className="car-card">
           <div className="car-image">
             <img src={Camry} alt="camry" width={260} height={214}/>
@@ -60,6 +61,7 @@ function CarCard() {
             </div>
           </div>
         </div>
+        </Link>
   )
 }
 
