@@ -37,7 +37,8 @@
 .preview-slider {
     width: 50%;
     height: 100px;
-   img{
+
+    img {
         object-fit: cover;
         height: 100px;
         border-radius: 12px;
@@ -45,13 +46,16 @@
         opacity: 0.5;
         transition: 0.3s ease-out;
         cursor: pointer;
-        &.active{
+
+        &.active {
             opacity: 1;
         }
-        &:hover{
+
+        &:hover {
             opacity: 1;
         }
     }
+
     position: absolute;
     bottom: 15px;
     z-index: 1;
@@ -60,11 +64,457 @@
     gap: 10px;
     overflow-y: auto;
     scroll-behavior: smooth;
-    &::-webkit-scrollbar{
+
+    &::-webkit-scrollbar {
         display: none;
     }
 }
 
 .swipers {
     position: relative;
+
+    .colorless-gocar {
+        bottom: 20px;
+        left: 20px;
+        z-index: 1;
+        position: absolute;
+
+        .a {
+            fill: #9daca9;
+        }
+
+        .b {
+            fill: #9daca9;
+        }
+    }
+}
+
+.car-info {
+    .a {
+        fill: #9daca9;
+    }
+
+    .b {
+        fill: wheat;
+    }
+}
+
+.car-page {
+    display: flex;
+    gap: 85px;
+    padding-top: 27px;
+}
+
+.car-info {
+    max-width: 881px;
+    display: flex;
+    gap: 26.72px;
+
+    h2 {
+        font-size: 32px;
+        color: #283D52;
+        margin: 0;
+        line-height: 38px;
+    }
+
+    .title {
+        height: 38px;
+        display: flex;
+        gap: 17.03px;
+        align-items: center;
+    }
+
+    .add-to-favourites {
+        width: 232.68px;
+        background-color: #9DACA9;
+        height: 32px;
+        color: #fff;
+        border-radius: 16px;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6.67px;
+        cursor: pointer;
+        transition: 0.3s ease-out;
+        font-weight: bold;
+
+        svg {
+            width: 17.78px;
+            height: 14.46px;
+
+            .a {
+                fill: white;
+            }
+        }
+
+        &:hover {
+            color: #283D52;
+            background-color: #F9C300;
+            box-shadow: 0px 0px 20px #F2BA154D;
+
+            .a {
+                fill: #283D52;
+            }
+        }
+    }
+
+    .car-features {
+        display: flex;
+        gap: 7.29px;
+        flex-wrap: wrap;
+
+        .car-feature {
+            background-color: white;
+            border-radius: 10px;
+            color: #9DACA9;
+            font-size: 14px;
+            line-height: 16px;
+
+            svg {
+                width: 13px;
+                height: 15px;
+            }
+
+            display: flex;
+            align-items: center;
+            gap: 4.69px;
+            padding: 10px;
+        }
+    }
+
+    .car-description {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+    }
+}
+
+.left-content {
+    max-width: 64.589442815%;
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+
+    .car-details {
+        display: flex;
+        flex-direction: column;
+        gap: 37px;
+
+        h3 {
+            color: #283D52;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        h4 {
+            font-size: 16px;
+            color: #283D52;
+            line-height: 18px;
+            margin: 0px;
+        }
+
+        .car-details-content {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+        }
+
+        .tables {
+            display: flex;
+            gap: 16px;
+        }
+
+        tr {
+            border-bottom: 1px solid #707070;
+            color: #283D52;
+            font-size: 16px;
+        }
+
+        td {
+            padding-bottom: 4px;
+        }
+
+        table {
+            max-width: 276px;
+            width: 100%;
+
+            tr:last-child {
+                border: none;
+            }
+        }
+    }
+
+    .review {
+        width: 398px;
+        height: 369px;
+        background-color: white;
+        border-radius: 16px;
+        padding: 36px;
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+        &-title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+        }
+        img{
+            width: 56px;
+            height: 56px;
+        }
+        &-rate{
+            display: flex;
+            gap: 6px;
+
+        }
+        &-comment{
+            font-size: 20px;
+            line-height: 34px;
+            color: #000000;
+            padding-bottom: 12px;
+        }
+        &-author{
+            display: flex;
+            flex-direction: column;
+            gap: 7.74px;
+            h3{
+                font-size: 16px;
+                line-height: 24px;
+                margin: 0;
+            }
+        }
+    }
+    .swiper-slide{
+        max-width: 398px;
+        gap: 6px;
+    }
+
+    .swiper {
+        width: 100%;
+        max-width: 812px;
+        margin-left: 0;
+        .swiper-button-next,.swiper-button-prev{
+            display: none;
+        }
+    }
+    .slider-title{
+        max-width: 812px;
+        display: flex;
+        justify-content: space-between;
+        height: 25px;
+        .slider-buttons{
+            display: flex;
+            gap: 40px;
+            .arrow{
+                max-height: 10px;
+            max-width: 6px;
+            }
+        }
+        h2{
+            margin: 0;
+            display: flex;
+            font-size: 18px;
+            align-items: center;
+            gap: 10.11px;
+        }
+        svg{
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    .arrow{
+        opacity: 0.5;
+        cursor:not-allowed;
+        &.active{
+            opacity: 1;
+            cursor:pointer;
+        }
+    }
+
+    .reviews{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+    }
+}
+
+.right-content{
+    max-width: 29.17888563%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    .contact-owner{
+        background-color: #5FD36C;
+        height: 50px;
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+        transition: 0.3s ease-out;
+        display: flex;
+        justify-content: center;
+        color: #283D52;
+        font-size: 16px;
+        line-height: 19px;
+        align-items: center;
+        cursor: pointer;
+        
+        &:hover{
+            background-color: #F9C300;
+            box-shadow: 0px 0px 20px #F2BA154D;
+        }
+    }
+    .rent-car{
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+        padding: 24px 34px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .renting-info{
+            display: flex;
+            justify-content: space-between;
+            div{
+                display: flex;
+                align-items: baseline;
+            }
+            h2,h3,h4{
+                margin: 0;
+                color: #283D52;
+            }
+            h2{
+                font-size: 32px;
+                line-height: 39px;
+            }
+            h3{
+                font-size: 24px;
+                line-height: 29px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+            h4{
+                font-size: 16px;
+                line-height: 18px;
+            }
+            svg{
+                .a{
+                fill: #283D52;
+                }
+            }
+        }
+        .renting{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            .double-input{
+                max-width: 250px;
+            }
+            .choose-location{
+                border: 1px solid #9DACA9;
+                border-radius: 10px;
+                height: 74px;
+                max-width: 330px;
+                font-weight: lighter;
+                font-size: 16px;
+                line-height: 18px;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                h3{
+                    margin: 0;
+                    font-weight: 400;
+                }
+            }
+        }
+        .currency-input{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .currency{
+            height: 40px;
+            align-items: center;
+            h4{
+                margin: 0;
+            }
+        }
+        .rent-prices{
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+        }
+        .rent-price{
+            display: flex;
+            justify-content: space-between;
+            h4{
+                font-size: 16px;
+                line-height: 18px;
+                color: #283D52;
+                margin: 0;
+            }
+            h3{
+                font-size: 24px;
+                line-height: 29px;
+                text-align: right;
+                color: #283D52;
+                margin: 0;
+            }
+        }
+        .rent-sum,.rent-sum>div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3{
+                font-size: 18px;
+                color: #283D52;
+                margin: 0;
+                line-height: 23px;
+            }
+            .green{
+                color: #5FD36C;
+            }
+            h2{
+                font-size: 32px;
+                margin: 0px;
+                line-height: 39px;
+            }
+        }
+    }
+    .reserve{
+        width: 100%;
+        background-color: #F9C300;
+        border-radius: 10px;
+        border: none;
+        font-size: 22px;
+        line-height: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s ease-out;
+        padding: 13px;
+        &:hover{
+            background-color: #5FD36C;
+        }
+    }
+    .report-problem{
+        font-size: 12px;
+        line-height: 14px;
+        color: #283D52;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s ease-out;
+        &:hover{
+            text-decoration: underline;
+            color: red;
+        }
+    }
 }

@@ -3,7 +3,6 @@ import Star from "../../resources/Star.svg";
 import CarCard from "./CarCard";
 import { useRef } from "react";
 import { useState } from "react";
-import { useEffect } from "react";
 import {ReactComponent as YellowStar} from '../../resources/YellowStar.svg'
 import SportsCar from '../../resources/SportsCar.png'
 import ClassicCar from '../../resources/ClassicCar.png'

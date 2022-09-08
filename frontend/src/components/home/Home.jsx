@@ -51,6 +51,7 @@ function Home() {
                 </div>
               </div>
             </Form.Item>
+            .
           </div>
           <div className="row">
             <Form.Item label="საჭე" name="steering_wheel">
